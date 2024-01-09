@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    /* COLORS */
+    --c-primary-black: #111111;
+    --c-primary-white: #ffffff;
+    --c-primary-purple: #5115F7;
+    --c-primary-rose: #F0EBFE;
+    --c-primary-grey: #232323;
+    --c-primary-Lgrey: #E5E5E5;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+} 
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "updays"
+    "today"
+    "today"
+    "footer";
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--c-primary-purple);
+}
+
+.updays {
+    grid-area: updays;
+    background-color: var(--c-primary-Lgrey)
+}
+
+.today {
+    grid-area: today;
+    background-color: var(--c-primary-white);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--c-primary-black);
+}
+
+.current {
+    background-color: var(--c-primary-rose);
+}
+
+p {
+    font-weight: 300;
+}
