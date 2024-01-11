@@ -15,6 +15,10 @@ body{
     font-size: 16px;
 } 
 
+/*  */
+/* GRID */
+/*  */
+
 .grid-container {
     display: grid;
     grid-template-areas: 
@@ -24,12 +28,13 @@ body{
     "today"
     "footer";
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .header {
     grid-area: header;
     background-color: var(--c-primary-purple);
+    
 }
 
 .updays {
@@ -51,6 +56,77 @@ body{
     background-color: var(--c-primary-rose);
 }
 
+/*  */
+/* BASICS */
+/*  */
+
 p {
     font-weight: 300;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.header, .updays, .today, .footer, .current{
+    padding: 1em;
+}
+
+.header h1 {
+    color: var(--c-primary-white);
+}
+
+
+.header p {
+    color: var(--c-primary-white);
+}
+
+.moreText {
+    display: none;
+}
+
+
+
+td {
+    padding: 0.5em;
+}
+
+table {
+    margin-bottom: 1em;
+}
+.nletter{
+    border: 1px solid var(--c-primary-black);
+    width: 95%;
+    padding: 1em;
+    border-radius: 2em;
+    margin: 1em 0;
+}
+.submit {
+    padding: 1em 2em;
+    background-color: var(--c-primary-black);
+    color: var(--c-primary-white);
+    width: 100%;
+    border-radius: 2em;
+}
+
+
+.swim{
+    width: 100%;
+}
+
+
+/*  */
+/* TABLET SIZE */
+/*  */
+
+@media screen and (min-width: 50em) {
+
+}
+
+/*  */
+/* DESKTOP SIZE */
+/*  */
+
+@media screen and (min-width: 63em) {
+    
 }
