@@ -68,7 +68,7 @@ h1 {
     font-weight: 400;
 }
 
-.header, .updays, .today, .footer, .current{
+.header, .today {
     padding: 1em;
 }
 
@@ -81,11 +81,20 @@ h1 {
     color: var(--c-primary-white);
 }
 
-.moreText {
-    display: none;
+.header a {
+    color: var(--c-primary-white);
+    font-weight: 300;
 }
 
+/* .moreText {
+    display: none;
+} */
 
+
+.updays p {
+    font-weight: 400
+    ;
+}
 
 td {
     padding: 0.5em;
@@ -94,12 +103,14 @@ td {
 table {
     margin-bottom: 1em;
 }
+
 .nletter{
     border: 1px solid var(--c-primary-black);
     width: 95%;
     padding: 1em;
     border-radius: 2em;
-    margin: 1em 0;
+    margin: 1em 0.5em;
+    background-color: var(--c-primary-Lgrey);
 }
 .submit {
     padding: 1em 2em;
@@ -107,12 +118,37 @@ table {
     color: var(--c-primary-white);
     width: 100%;
     border-radius: 2em;
+    margin-bottom: 1em;
 }
 
+.current {
+    padding: 0.3em;
+}
 
+.temp {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.temp-text {
+    font-weight: 400;
+}
 .swim{
     width: 100%;
 }
+
+
+.activity {
+    border-bottom: 1px solid var(--c-primary-black);
+}
+.activity-title {
+    font-size: 1rem;
+}
+
+
+
+
+
 
 
 /*  */
