@@ -4,20 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DEPT weather planner</title>
-        <link rel="stylesheet" href="./assets/style/style.css">
-        <script src="./assets/java/main.js"></script>
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="./java/main.js"></script>
+        <script src="https://kit.fontawesome.com/319280bb92.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <div class="grid-container">
             <header class="header">
-                <img src="./assets/dept.svg" alt="Dept logo">
+                <img src="./assets/dept.svg" class="logo" alt="Dept logo">
                 <h1>DEPT &#174; weather planner</h1>
                 <p>Picture this: an application that doesn't teel you the weather, but also helps you plan your activities around it. Imagine knowing exactly the perfect dat to plan that hike, or when to avoid the outdoor concert due to an unexpected shower. That's exactly what the Dept weather planner offers you.</p>
-                <!-- <span class="dots">...</span><span class="moreText"> -->
-                <p>Built with cutting-edge technologies, our weather planner brings you accurate, real-time weather data with a slick and user-friendly interface. But it's not just a weather app: it's an intuitive daily planner that syncs with the weather. With a range of activities to choose from, it suggests the best options based on current and forecasted weather conditions.</span></p>
-                <a href="#">Read less</a>
-                <!-- <button onclick="myFunction()" class="moreBtn">Read more</button> -->
+                
+                <details>
+                    <summary>Read more</summary>
+                        <p>Built with cutting-edge technologies, our weather planner brings you accurate, real-time weather data with a slick and user-friendly interface. But it's not just a weather app: it's an intuitive daily planner that syncs with the weather. With a range of activities to choose from, it suggests the best options based on current and forecasted weather conditions.</span></p>
+                </details>
+
             </header>
 
 <!-- UPDAYS -->
@@ -31,50 +34,55 @@
                     </thead>
 
                         <tr>
-                            <td>Tuesday 25th Feb</td>
-                            <td>o</td>
-                            <td>19&#176; / 22&#176;</td>
-                            <td>%</td>
+                            <th>Tuesday 25th Feb</th>
+                        </tr>
+                        <tr>
+                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-droplet"></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
                             <td><</td>
                         </tr>
 
                         <tr>
-                            <td>Wednesday 26th Feb</td>
-                            <td>o</td>
-                            <td>19&#176; / 22&#176;</td>
-                            <td>%</td>
+                            <th>Wednesday 26th Feb</th>
+                        </tr>
+                        <tr>
+                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
                             <td><</td>
                         </tr>
 
                         <tr>
-                            <td>Thursday 27th Feb</td>
-                            <td>o</td>
-                            <td>19&#176; / 22&#176;</td>
-                            <td>%</td>
+                            <th>Thursday 27th Feb</th>
+                        </tr>
+                        <tr>
+                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
                             <td><</td>
                         </tr>
 
                         <tr>
-                            <td>Friday 28th Feb</td>
-                            <td>o</td>
-                            <td>19&#176; / 22&#176;</td>
-                            <td>%</td>
+                            <th>Friday 28th Feb</th>
+                        </tr>
+                        <tr>
+                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
                             <td><</td>
                         </tr>
 
                         <tr>
-                            <td>Saturday 29th Feb</td>
-                            <td>o</td>
-                            <td>19&#176; / 22&#176;</td>
-                            <td>%</td>
+                            <th>Saturday 29th Feb</th>
+                        </tr>
+                        <tr>
+                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
                             <td><</td>
@@ -82,10 +90,10 @@
                 </table>
 
 <!-- NEWSLETTER -->
-                <label>Want to get a daily forecast?</label>
-                <input type="text" placeholder="Enter your e-mailaddress" class="nletter">
-                <input type="submit" placeholder="Submit" class="submit">
-
+                <label class="news-label">Want to get a daily forecast?
+                    <input type="text" placeholder="Enter your e-mailaddress" class="nletter">
+                    <input type="submit" placeholder="Submit" class="submit">
+                </label>
             </section>
     
 <!-- TODAY -->
@@ -99,53 +107,96 @@
 
 <!-- COULD DO -->
                     <h2>Some things you could do:</h2>
-                <div clas="activity">
-                    <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
-                    <h3 class="activity-title">Swimming</h3>
-                    <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
-                </div>
 
-                <div clas="activity">
+                <a href="#" class="activity">
                     <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
                     <h3 class="activity-title">Swimming</h3>
                     <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
-                </div>
+                </a>
 
-                <div clas="activity">
+                <dialog class="activity-overlay">
+                    <Button class="overlay-close">X</button>
+                    <img class="overlay-img" src="./assets/iceSkating.png" alt="skater on ice rink">
+
+                    <h4>Ice skating</h4>
+                    <p>You can do this event</p>
+                    <p>You can do this activity between 22&#176; and 44&#176; in Amsterdam</p>
+                    <p>A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.</p>
+                    <button class="overlay-button">View event</button>
+                </dialog>
+
+                <!-- <article clas="activity">
                     <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
                     <h3 class="activity-title">Swimming</h3>
                     <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
-                </div>
+                </article>
+
+                <article clas="activity">
+                    <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
+                    <h3 class="activity-title">Swimming</h3>
+                    <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
+                </article>
                 
-<!-- NOT DO -->
+ NOT DO -->
 
-                <h2>Some things you should not do:</h2>
-                <div clas="activity">
-                    <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
-                    <h3 class="activity-title">Swimming</h3>
-                    <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
-                </div>
-
-                <div clas="activity">
-                    <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
-                    <h3 class="activity-title">Swimming</h3>
-                    <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
-                </div>
-
-                <div clas="activity">
-                    <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
-                    <h3 class="activity-title">Swimming</h3>
-                    <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
-                </div>
+                <!-- <h2>Some things you should not do:</h2>
+                <article clas="activity">
+                    <a href="#swimming" class="more-info-link">
+                        <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
+                        <h3 class="activity-title">Swimming</h3>
+                        <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
+                    </a>
+                </article>
+                <section class="overlay" id="swimming" popover>
+                   Todo: extra info uit overlay.. -->
+                    <!-- Blabla extra info over swimming
                 </section>
+
+                <article clas="activity">
+                    <a href="#ice-skating" class="more-info-link">
+                        <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
+                        <h3 class="activity-title">Swimming</h3>
+                        <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
+                    </a>
+                </article>
+                <section class="overlay" id="ice-skating" popover> -->
+                    <!-- Todo: extra info uit overlay.. -->
+                    <!-- Blabla extra info over ice skating
+                </section>
+
+                <article clas="activity">
+                    <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
+                    <h3 class="activity-title">Swimming</h3>
+                    <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
+                 </article>   -->
+            </section>
 
 <!-- FOOTER -->
 
-            <footer class="footer">
-                <img src="./assets/dept.svg" alt="Dept logo">
+            <!-- <footer class="footer">
+                <img src="./assets/dept.svg" class="logo" alt="Dept logo">
                 <p>X</p>
-                <p>fdnd</p>
+                <p class="fdnd">fdnd</p>
             </footer>
-        </div>
+        </div> -->
+        <!-- <script>
+            const activity = document.getElementsByClassName(".activity");
+const activityOverlay = document.getElementsByClassName(".activity-overlay");
+
+activity.addEventListener('click', () => activityOverlay.showModal());
+        </script> -->
+        <script>
+            const activity = document.querySelector(".activity");
+const activityOverlay = document.querySelector(".activity-overlay");
+
+activity.addEventListener('click', () => {
+  activityOverlay.showModal();
+});
+
+const overlayClose = document.querySelector(".overlay-close");
+overlayClose.addEventListener('click', () => {
+  activityOverlay.close();
+});
+        </script>
     </body>
 </html>
