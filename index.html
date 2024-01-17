@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DEPT weather planner</title>
         <link rel="stylesheet" href="./style/style.css">
-        <script src="./java/main.js"></script>
+        <script type="application/javascript" src="./java/main.js" defer></script>
         <script src="https://kit.fontawesome.com/319280bb92.js" crossorigin="anonymous"></script>
     </head>
 
@@ -182,18 +182,6 @@
             </footer>
         </div>
         
-        <script>
-            const activity = document.querySelector(".activity");
-const activityOverlay = document.querySelector(".activity-overlay");
-
-activity.addEventListener('click', () => {
-  activityOverlay.showModal();
-});
-
-const overlayClose = document.querySelector(".overlay-close");
-overlayClose.addEventListener('click', () => {
-  activityOverlay.close();
-});
-        </script>
+        
     </body>
 </html>
