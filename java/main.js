@@ -5,7 +5,7 @@
 //   activityOverlay.showModal();
 // });
 
-// const activityClose = document.querySelector(".activity-close");
-// activityClose.addEventListener('click', () => {
+// const overlayClose = document.querySelector(".overlay-close");
+// overlayClose.addEventListener('click', () => {
 //   activityOverlay.close();
 // });

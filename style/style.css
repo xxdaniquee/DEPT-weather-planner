@@ -9,6 +9,7 @@
     --c-primary-grey: #232323;
     --c-primary-Lgrey: #E5E5E5;
     --c-fdnd-green: #66E5BF;
+    --c-sun-yellow: #FFFF66;
     --c-rain-blue: #2885C7;
     --c-overlay-background: black;
 }
@@ -120,6 +121,9 @@ body{
         font-weight: bold;
     }
     
+    .fa-sun {
+        color: var(--c-sun-yellow);
+    }
     td:nth-child(2) {
         color: var(--c-rain-blue)
     }
@@ -178,16 +182,46 @@ body{
         text-decoration: none;
         color: var(--c-primary-black);
     }
+
+    
     .activity-title {
         font-size: 1rem;
     }
 
     .activity-close{
         font-size: 1.5rem;
+        list-style: none;
+    }
+
+    .activity-overlay h4{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .fa-chevron-left, .fa-chevron-right {
+        padding: 1em;
+        background-color: var(--c-primary-white);
+        border-radius: 50%;
+    }
+
+    .overlay-do {
+        background-color: var(--c-primary-rose);
+    }
+
+    .overlay-temp {
+        font-weight: 400;
+    }
+
+    .overlay-button {
+        background-color: var(--c-primary-black);
+        color: var(--c-primary-white);
+        border: none;
+        border-radius: 2em;
+        padding: 1em;
     }
 
     dialog::backdrop {
-    background: var(--c-overlay-background);
+        background: black;
     }
 
 /*  */

@@ -37,55 +37,55 @@
                             <th>Tuesday 25th Feb</th>
                         </tr>
                         <tr>
-                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-sun"></i> 19&#176; / <span>22&#176;</span></td>
                             <td><i class="fa-solid fa-droplet"></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
-                            <td><</td>
+                            <td><i class="fa-solid fa-play"></i></td>
                         </tr>
 
                         <tr>
                             <th>Wednesday 26th Feb</th>
                         </tr>
                         <tr>
-                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-sun"></i> 19&#176; / <span>22&#176;</span></td>
                             <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
-                            <td><</td>
+                            <td><i class="fa-solid fa-play"></i></td>
                         </tr>
 
                         <tr>
                             <th>Thursday 27th Feb</th>
                         </tr>
                         <tr>
-                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-sun"></i> 19&#176; / <span>22&#176;</span></td>
                             <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
-                            <td><</td>
+                            <td><i class="fa-solid fa-play"></i></td>
                         </tr>
 
                         <tr>
                             <th>Friday 28th Feb</th>
                         </tr>
                         <tr>
-                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-sun"></i> 19&#176; / <span>22&#176;</span></td>
                             <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
-                            <td><</td>
+                            <td><i class="fa-solid fa-play"></i></td>
                         </tr>
 
                         <tr>
                             <th>Saturday 29th Feb</th>
                         </tr>
                         <tr>
-                            <td>☼ 19&#176; / <span>22&#176;</span></td>
+                            <td><i class="fa-solid fa-sun"></i> 19&#176; / <span>22&#176;</span></td>
                             <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
-                            <td><</td>
+                            <td><i class="fa-solid fa-play"></i></td>
                         </tr>
                 </table>
 
@@ -115,12 +115,14 @@
                 </a>
 
                 <dialog class="activity-overlay">
-                    <Button class="overlay-close">X</button>
+                    <i class="fa-solid fa-chevron-left"></i>
                     <img class="overlay-img" src="./assets/iceSkating.png" alt="skater on ice rink">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <Button class="overlay-close">X</button>
 
                     <h4>Ice skating</h4>
-                    <p>You can do this event</p>
-                    <p>You can do this activity between 22&#176; and 44&#176; in Amsterdam</p>
+                    <p class="overlay-do">You can do this event</p>
+                    <p class="overlay-temp">You can do this activity between 22&#176; and 44&#176; in Amsterdam</p>
                     <p>A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.</p>
                     <button class="overlay-button">View event</button>
                 </dialog>
@@ -173,18 +175,13 @@
 
 <!-- FOOTER -->
 
-            <!-- <footer class="footer">
+            <footer class="footer">
                 <img src="./assets/dept.svg" class="logo" alt="Dept logo">
                 <p>X</p>
                 <p class="fdnd">fdnd</p>
             </footer>
-        </div> -->
-        <!-- <script>
-            const activity = document.getElementsByClassName(".activity");
-const activityOverlay = document.getElementsByClassName(".activity-overlay");
-
-activity.addEventListener('click', () => activityOverlay.showModal());
-        </script> -->
+        </div>
+        
         <script>
             const activity = document.querySelector(".activity");
 const activityOverlay = document.querySelector(".activity-overlay");
