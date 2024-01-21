@@ -17,6 +17,7 @@ body{
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    margin: auto;
 } 
 
 /* GRID */
@@ -112,7 +113,9 @@ body{
         border-collapse: collapse;
         margin: 1.5em;
     }
-    
+    /* tr {
+        border-bottom: 1px solid var(--c-primary-rose);
+    } */
     th, td {
         border: none;
         text-align: left;
@@ -130,10 +133,14 @@ body{
         color: var(--c-rain-blue)
     }
 
+    tr:nth-child(2), tr:nth-child(4), tr:nth-child(6), tr:nth-child(8) {
+        border-bottom: 1px solid var(--c-primary-rose);
+    }
+
     
 /* NEWSLETTER */
 
-    label {
+    .updays form {
         display: block;
         padding-inline: 1em;
     }
@@ -177,6 +184,7 @@ body{
         font-weight: 400;
     }
     .activity-img {
+        object-fit: cover;
         width: 100%;
         height: 10em;
     }
@@ -186,16 +194,7 @@ body{
     .activity {
         text-decoration: none;
         color: var(--c-primary-black);
-    }
-
-    .activity-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
+        cursor: pointer;
     }
 
     .activity-title {
@@ -204,8 +203,28 @@ body{
 
     .activity p {
         margin-bottom: 1em;
+        color: var(--c-primary-grey);
     }
 
+    .text-container {
+        border-bottom: 1px solid var(--c-primary-rose);
+        margin-bottom: 1em;
+    }
+
+/* OVERLAY */
+
+
+
+    .activity-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 0;
+    }
 
     .overlay-close{
         position: absolute;
@@ -218,10 +237,10 @@ body{
         cursor: pointer; 
     }
 
-    .overlay-img {
+    .activity-img, .overlay-img{
         width: 100%;
-      height: 15em; 
-      display: block;
+        height: 15em; 
+        object-fit: contain;
     }
 
     .fa-chevron-left, .fa-chevron-right {
@@ -256,6 +275,7 @@ body{
     .overlay-do {
         background-color: var(--c-primary-rose);
         width: 40%;
+        padding: 0.3em;
     }
 
     .overlay-temp {
@@ -273,7 +293,7 @@ body{
         border: none;
         border-radius: 2em;
         padding: 1em;
-        margin: 0.5em;
+        margin: 1em;
     }
 
     dialog::backdrop {
@@ -307,22 +327,91 @@ body{
 /*  */
 
 @media all and (min-width: 50em) {
+   
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) repeat(3, 0);
+        grid-template-rows: repeat(3, 1fr) repeat(2, 0);
+        grid-template-areas: 
+            "header today"
+            "updays today"
+            "footer footer";
+    }
 
+    .header {
+        padding: 2.5em 4em 0 4em
+    }
+    
+}.updays {
+    padding: 2em 4em 0 4em
 }
+
+.today { 
+    padding: 1em;
+}
+
+.activity-img {
+    width: 100%;
+    max-height: 5em;
+}   
 
 /*  */
 /* DESKTOP SIZE */
 /*  */
 
 @media all and (min-width: 63em) {
+
     .grid-container {
         display: grid;
+        grid-template-columns: repeat(2, 1fr) repeat(3, 0);
+        grid-template-rows: repeat(3, 1fr) repeat(2, 0);
         grid-template-areas: 
-        "header, today"
-        "updays, today"
-        "footer, footer";
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            "header today"
+            "updays today"
+            "footer footer";
     }
+    
+    .header {
+        padding: 2em 4em 0 10em
+    }
+
+    .updays {
+        padding: 2em 4em 0 10em
+    }
+
+    .header h1 {
+        margin-top: 2em;
+    }
+    .today {
+        padding-right: 10em;
+    }
+   .activity {
+        display: flex;
+        flex-direction: row;
+   }
+
+
+   .activity-img {
+        max-width: 150px;
+        max-height: 150px;
+    }   
+
+    .activity-title {
+        margin-bottom: 0.5em;
+    }
+
+    .text-container {
+        padding: auto;
+        margin: 1em;
+    }
+
+    .updays {
+        padding: 2em 4em 0 10em
+    }
+
+    table{
+        margin-bottom: 4em;
+    }
+
 }
 

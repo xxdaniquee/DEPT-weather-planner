@@ -25,7 +25,7 @@
 
 <!-- UPDAYS -->
 
-            <section class="updays">
+            <article class="updays">
                 <table>
                     <thead>
                         <tr>
@@ -38,7 +38,7 @@
                         </tr>
                         <tr>
                             <td><i class="fa-solid fa-sun"></i> 19&#176; / <span>22&#176;</span></td>
-                            <td><i class="fa-solid fa-droplet"></td>
+                            <td><i class="fa-solid fa-droplet"></i></td>
                             <td>0.5mm</td>
                             <td>N/W</td>
                             <td><i class="fa-solid fa-play"></i></td>
@@ -89,16 +89,18 @@
                         </tr>
                 </table>
 
+                
 <!-- NEWSLETTER -->
-                <label class="news-label">Want to get a daily forecast?
-                    <input type="text" placeholder="Enter your e-mailaddress" class="nletter">
-                    <input type="submit" class="submit">
-                </label>
-            </section>
+                <form>
+                    <label class="news-label">Want to get a daily forecast?</label>
+                    <input type="email" placeholder="Enter your e-mailaddress" class="nletter" required>
+                    <input type="submit" value="submit" class="submit">
+                </form>
+            </article>
     
 <!-- TODAY -->
 
-            <section class="today">
+            <article class="today">
                 <div class="current">
                     <p class="temp">24&#176;</p>
                     <p class="temp-text">It's currently around ~24&#176; in the Netherlands</p>
@@ -108,10 +110,12 @@
 <!-- COULD DO -->
                     <h2>Some things you could do:</h2>
 
-                <a href="#" class="activity">
+                <a href="#" class="activity" id="swim">
                     <img src="./assets/swim.jpg" class="activity-img" alt="Swimmer in mountain lake.">
-                    <h3 class="activity-title">Swimming</h3>
-                    <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
+                    <div class="text-container">
+                        <h3 class="activity-title">Swimming</h3>
+                        <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
+                    </div>
                 </a>
 
                 <dialog class="activity-overlay">
@@ -127,61 +131,54 @@
                     <button class="overlay-button">View event</button>
                 </dialog>
 
-                <a href="#" class="activity">
+                <a href="#" class="activity" id="cyling">
                     <img src="./assets/cycle.jpg" class="activity-img" alt="cyclists along the beach.">
-                    <h3 class="activity-title">Cycling</h3>
-                    <p>A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.</p>
+                    <div class="text-container">
+                        <h3 class="activity-title">Cycling</h3>
+                        <p>A sustainable and exhilarating way to explore the world on two wheels. It’s a great way to exercise.</p>
+                    </div>
                 </a>
 
-                <a class="activity">
+                <a href="#" class="activity" id="beach">
                     <img src="./assets/beach.jpg" class="activity-img" alt="Sunglasses on the beach.">
-                    <h3 class="activity-title">Go to the beach</h3>
-                    <p>Where sun, sand, and waves create the perfect setting for relaxation, tanning, and fun.</p>
+                    <div class="text-container">
+                        <h3 class="activity-title">Go to the beach</h3>
+                        <p>Where sun, sand, and waves create the perfect setting for relaxation, tanning, and fun.</p>
+                    </div>
                 </a>
                 
  <!-- NOT DO --> 
 
                 <h2>Some things you should not do:</h2>
 
-                 <a class="activity">
+                <a href="#" class="activity" id="iceSkating">
                     <img src="./assets/IceSkating.jpg" class="activity-img" alt="skater on ice rink">
-                    <h3 class="activity-title">Ice skating</h3>
-                    <p>Gliding gracefully or spinning with joy on a frozen canvas of ice. Heerenveen is the place to be!.</p>
+                    <div class="text-container">
+                        <h3 class="activity-title">Ice skating</h3>
+                        <p>Gliding gracefully or spinning with joy on a frozen canvas of ice. Heerenveen is the place to be!.</p>
+                    </div>
                 </a>
 
-                <a class="activity">
+                <a href="#" class="activity" id="walk">
                     <img src="./assets/walk.jpg" class="activity-img" alt="man on the pedestrian crosswalk">
-                    <h3 class="activity-title">Walking</h3>
-                    <p>A simple and natural exercise that connects us to the world, rejuvenates the mind, and nourishes the body.</p>
+                    <div class="text-container">
+                        <h3 class="activity-title">Walking</h3>
+                        <p>A simple and natural exercise that connects us to the world, rejuvenates the mind, and nourishes the body.</p>
+                    </div>
                 </a>
 
-                <a class="activity">
+                <a href="#" class="activity" id="darts">
                     <img src="./assets/darts.jpg" class="activity-img" alt="dart in the dartboard">
-                    <h3 class="activity-title">Darts</h3>
-                    <p>Precision, focus, and camaraderie combined in a game of skill and strategy. It’s crazy!</p>
+                    <div class="text-container">
+                        <h3 class="activity-title">Darts</h3>
+                        <p>Precision, focus, and camaraderie combined in a game of skill and strategy. It’s crazy!</p>
+                    </div>
                 </a>
 
-                <!-- notes -->
-                <!-- <article clas="activity">
-                    <a href="#swimming" class="more-info-link">
-                        <img src="./assets/swim.png" class="swim" alt="Swimmer in mountain lake.">
-                        <h3 class="activity-title">Swimming</h3>
-                        <p>In recreation and sports, the propulsion of the body through water by combined arm and leg motions.</p>
-                    </a>
-                </article>
-                <section class="overlay" id="swimming" popover>
-                   Todo: extra info uit overlay..
-                    Blabla extra info over swimming
-                </section> -->
+                
 
                 
-                <!-- <section class="overlay" id="ice-skating" popover> 
-                    Todo: extra info uit overlay.. -->
-                    <!-- Blabla extra info over ice skating
-                </section> -->
-
-                
-            </section>  
+            </article>  
 
 <!-- FOOTER -->
 
@@ -190,8 +187,7 @@
                 <p>X</p>
                 <p class="fdnd">fdnd</p>
             </footer>
-        
-        
+        </div>
         
     </body>
 </html>

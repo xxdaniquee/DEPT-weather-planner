@@ -1,8 +1,10 @@
-const activity = document.querySelector(".activity");
+const activity = document.querySelectorAll(".activity");
 const activityOverlay = document.querySelector(".activity-overlay");
 
-activity.addEventListener('click', () => {
-  activityOverlay.showModal();
+activity.forEach(activity => {
+  activity.addEventListener('click', () => {
+    activityOverlay.showModal();
+  });
 });
 
 const overlayClose = document.querySelector(".overlay-close");
