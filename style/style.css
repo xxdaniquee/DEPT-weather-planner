@@ -96,9 +96,11 @@ body{
         list-style: none;
     }
 
+
 /*  */
 /* UPDAYS */
 /*  */
+
 
     .updays p {
         font-weight: 400
@@ -113,9 +115,7 @@ body{
         border-collapse: collapse;
         margin: 1.5em;
     }
-    /* tr {
-        border-bottom: 1px solid var(--c-primary-rose);
-    } */
+    
     th, td {
         border: none;
         text-align: left;
@@ -129,6 +129,7 @@ body{
     .fa-sun {
         color: var(--c-sun-yellow);
     }
+
     td:nth-child(2) {
         color: var(--c-rain-blue)
     }
@@ -166,12 +167,14 @@ body{
         margin-bottom: 1em;
     }
 
+
 /*  */
 /* TODAY */
 /*  */
 
+
     .current {
-        padding: 0.3em;
+        padding: 1em;
     }
 
     .temp {
@@ -183,18 +186,18 @@ body{
     .temp-text {
         font-weight: 400;
     }
-    .activity-img {
-        object-fit: cover;
-        width: 100%;
-        height: 10em;
-    }
+
 
 /* Activity */
 
     .activity {
+        display:block;
         text-decoration: none;
         color: var(--c-primary-black);
         cursor: pointer;
+
+        margin-bottom: 1em;
+        border-bottom: 1px solid var(--c-primary-rose);
     }
 
     .activity-title {
@@ -207,23 +210,18 @@ body{
     }
 
     .img-container {
-        box-sizing: border-box;
-        height: 10em;
+        height: 33vw;
     }
     
     .activity-img {
+        display: block;
         object-fit: cover;
         width: 100%;
         height: 100%;
     }  
 
-    .text-container {
-        border-bottom: 1px solid var(--c-primary-rose);
-        margin-bottom: 1em;
-    }
 
 /* OVERLAY */
-
 
 
     .activity-overlay {
@@ -274,7 +272,7 @@ body{
     .fa-chevron-right {
         right: 0.6em; 
         transform: translateY(-50%) translateX(40%); 
-      }
+    }
 
       .activity-overlay h4{
         font-size: 2rem;
@@ -312,9 +310,11 @@ body{
         opacity:0.8;
     }
 
+
 /*  */
 /* FOOTER */
 /*  */
+
 
     .footer{
         display: flex;
@@ -333,21 +333,24 @@ body{
         font-weight: 700;
     }
 
+
 /*  */
 /* TABLET SIZE */
 /*  */
+
 
 @media all and (min-width: 50em) {
    
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr) repeat(3, 0);
-        grid-template-rows: repeat(3, 1fr) repeat(2, 0);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas: 
             "header today"
             "updays today"
             "footer footer";
     }
+
 
     .header {
         padding: 2.5em 3em 0 3em
@@ -365,73 +368,101 @@ body{
         margin-bottom: 5em;
     }
 
-    .img-container {
-        box-sizing: border-box;
-        height: 10em;
+    .activity {
+        display: flex;
+        gap:.5em;
+        padding-bottom:1em;
     }
+
+    .img-container {
+        width:unset;
+        height: 6em;
+        aspect-ratio: 1/1;
+    }
+
     .activity-img {
         object-fit: cover;
         width: 100%;
         height: 100%;
     }   
 
+    .activity-title {
+        margin:0;
+    }
+
+    .activity-title + p {
+        margin:0;
+    }
+
 }
+
 
 /*  */
 /* DESKTOP SIZE */
 /*  */
 
+
 @media all and (min-width: 63em) {
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr) repeat(3, 0);
-        grid-template-rows: repeat(3, 1fr) repeat(2, 0);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas: 
             "header today"
             "updays today"
             "footer footer";
     }
+
     
     .header {
-        padding: 2em 4em 0 10em
+        padding: 2em 4em 0 10em;
     }
 
     .updays {
-        padding: 2em 4em 0 10em
+        padding: 2em 4em 0 10em;
+    }
+    .today {
+        margin: 2em 5em 0 2em;
+       
     }
 
     .header h1 {
         margin-top: 2em;
     }
+
     .today {
         padding-right: 5em;
     }
+
    .activity {
         display: flex;
-        flex-direction: row;
+        gap:.5em;
+        padding-bottom:1em;
     }
 
-
    .img-container {
-        width: 7em;
-        height: 7em;
+        width:unset;
+        height: 6em;
+        aspect-ratio: 1/1;
     }
 
     .activity-img {
         object-fit: cover;
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
     }  
    
-
     .activity-title {
-        margin-bottom: 0.5em;
+        margin:0;
+    }
+
+    .activity-title + p {
+        margin:0;
     }
 
     .text-container {
         padding: auto;
-        margin: 1em;
     }
 
     .updays {
@@ -440,6 +471,22 @@ body{
 
     table{
         margin-bottom: 4em;
+    }
+
+    .footer {
+        height: 100vh;
+    }
+
+    .current {
+        display: flex;
+    }
+
+   .temp-text{
+    margin-bottom: 0;
+   }
+
+    .temp{
+        margin: 0.2em;
     }
 
 }
